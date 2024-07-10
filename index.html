@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embodied Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Embodied Assistant: Robot Mobility Operations Guided by <br> Open Vocabulary in Open Environments Utilizing LLM</h1>
+            <p>
+                Yanan Guo<sup>1,*</sup>, Yanshu Ni<sup>1,*</sup>, Jing Jin<sup>1,✝</sup>, Yu Jiang<sup>1</sup>, Dandan Li<sup>1</sup>, Yi Shen<sup>1</sup>
+                <br>
+                <sup>1</sup>Department of Control Science and Engineering, Harbin Institute of Technology
+                <br>
+                <span class="contribution">*Indicates Equal Contribution</span>
+            </p>
+        </header>
+        <video controls>
+            <source src="Full video summary.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Abstract Section -->
+    <div class="abstract-section">
+        <h2>Abstract</h2>
+        <p>In the field of artificial intelligence and robotics, enabling robots to understand and execute complex tasks in unknown and open environments through natural language has become a frontier of current research.  Traditional methods that rely on predefined action libraries face significant limitations when dealing with environmental diversity and task uncertainty. Accordingly, this study introduces a novel embodied intelligence framework named 'Embodied Assistant', which utilizes large language models (LLMs) for open-ended reasoning and adaptive task planning, can autonomously guide robots to flexibly complete challenging tasks in complex scenarios without relying on fixed action templates. By establishing effective multimodal LLM interaction pathways, this framework grants robots the ability to perceive and understand the task environment, concurrently allowing them to accurately interpret natural language instructions, and to independently plan action strategies along with robust robot trajectories. Moreover, the introduced multi-level task feedback mechanism effectively enhances the robots' ability to self-correct and replan when they encounter planning failures. In extensive real-life testing scenarios, the proposed method achieved an 83.3% task success rate across various combined mobility and grasping tasks, significantly outperforming the most advanced baseline methods. A detailed analysis of robot fault recovery further demonstrates the substantial potential of this method in practical applications.</p>
+    </div>
+    <!-- Approach Section -->
+    <div class="approach-section">
+        <h2>Approach</h2>
+        <img src="figure1.jpg" alt="Approach Diagram">
+        <p>The "Embodied Assistant" framework integrates environment perception to identify tasks, plans actions based on natural language instructions, and implements a dynamic replanning mechanism triggered by feedback errors. The system processes tasks through environmental interaction, plan formulation, execution, and continuous adjustment based on feedback, adapting until the task's successful completion or critical failure.</p>
+    </div>
+    <!-- Results Section -->
+    <div class="results-section">
+        <h2>Results</h2>
+        <label for="taskSelector">Result Display of Task:</label>
+        <select id="taskSelector" onchange="updateVideo()">
+            <option value="task1">Fetch Orange</option>
+            <option value="task2">Toy Transfer</option>
+            <option value="task3">Fetch Warmth</option>
+            <option value="task4">Fruit Organizing</option>
+            <option value="task5">Fetch Shirt</option>
+            <option value="task6">Apple Placement</option>
+            <option value="task7">Quench Thirst</option>
+            <option value="task8">Alleviate Cold</option>
+        </select>
+        <video id="taskVideo" controls>
+            <source src="task1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        function updateVideo() {
+            var selector = document.getElementById('taskSelector');
+            var video = document.getElementById('taskVideo');
+            video.src = selector.value + '.mp4';
+            video.load();
+            video.play();
+        }
+    </script>
+    <!-- Prompts Section -->
+    <div class="prompts-section">
+        <h2>Prompts</h2>
+        <div class="sub-section">
+            <h3>Environment Perception and Reasoning:</h3>
+            <a href="Environmental Perception.txt">Environmental Perception</a> <a href="Environmental Reasoning.txt">Environmental Reasoning</a>
+        </div>
+        <div class="sub-section">
+            <h3>Task Decomposition and Planning:</h3>
+            <a href="High-level Planner.txt">High-level Planner</a> <a href="Low-level Planner.txt">Low-level Planner</a> <a href="Actuator.txt">Actuator</a> <a href="Detector.txt">Detector</a> <a href="Retrieve Cost Map.txt">Retrieve Cost Map</a>
+        </div>
+        <div class="sub-section">
+            <h3>Task Feedback and Dynamic Replanning:</h3>
+            <a href="Code Replanning.txt">Code Replanning</a> <a href="Execution Replanning.txt">Execution Replanning</a>
+        </div>
+    </div>
+</body>
+</html>

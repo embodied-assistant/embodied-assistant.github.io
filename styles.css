@@ -1,0 +1,177 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* 设置容器高度为视窗的100% */
+    justify-content: center;  /* 使用 center 代替 space-around 以更好地控制位置 */
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 50px; /* 增加header的下边距以将作者信息下移 */
+}
+
+header h1 {
+    font-size: 45px;  /* 增加标题字体大小 */
+    font-weight: bold;
+    margin-top: 20px;  /* 调整标题顶部外边距 */
+    padding-top: 20px;  /* 增加顶部内边距 */
+}
+
+header p {
+    font-size: 23px;
+    margin-bottom: 10px; /* 减少与视频之间的间距 */
+}
+
+.contribution {
+    font-size: 20px;  /* 特别为贡献声明设置字体大小 */
+    margin-top: 15px;  /* 增加声明与作者列表的间距 */
+}
+
+video {
+    width: 55%;  /* 缩小视频宽度 */
+    margin-top: 0px;  /* 减少视频与上方内容的间隔 */
+}
+
+.abstract-section {
+    background-color: #f2f2f2;  /* 灰色背景 */
+    padding:  40px 26% 40px 26%;  /* 内边距 */
+    width: 100%;  /* 宽度 */
+    box-sizing: border-box;  /* 边框盒模型 */
+    text-align: left;  /* 文本左对齐 */
+}
+
+.abstract-section h2 {
+    font-size: 35px;  /* 增加摘要标题字体大小 */
+    color: #333;  /* 深灰色标题 */
+    margin-top: 0;
+    text-align: center;  /* 标题居中 */
+}
+
+.abstract-section p {
+    color: #666;  /* 深灰色文字 */
+    line-height: 1.6;  /* 行高 */
+    text-align: justify;  /* 文本两端对齐 */
+}
+
+.approach-section {
+    padding: 40px 15% 5px 15%;  /* 上下40px, 左右10%的内边距 */
+    width: 100%;  /* 宽度 */
+    box-sizing: border-box;  /* 边框盒模型 */
+    text-align: left;  /* 文本左对齐 */
+}
+
+.approach-section h2 {
+    font-size: 35px;  /* 设置标题字体大小 */
+    color: #333;  /* 深灰色标题 */
+    margin-top: 0;
+    text-align: left;  /* 标题左对齐 */
+}
+
+.approach-section p {
+    color: #666;  /* 深灰色文字 */
+    font-size: 15px; /* 字体大小 */
+    line-height: 1.6;  /* 行高 */
+    text-align: left;  /* 文本左对齐 */
+    padding: 0;  /* 无额外内边距 */
+}
+
+.approach-section img {
+    width: 100%;  /* 图片宽度调整为90% */
+    max-width: 1200px;  /* 最大宽度 */
+    height: auto;  /* 自动高度 */
+    display: block;  /* 块级显示 */
+    margin: 20px auto;  /* 上下间距20px，自动左右居中 */
+}
+
+.results-section {
+    padding: 0px 5% 10px 5%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.results-section h2 {
+    font-size: 35px;
+    color: #333;
+    text-align: left;
+    padding-left: 10.9%;
+}
+
+.results-section label {
+    font-size: 20px;
+    color: #666;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.results-section select {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 0;
+    font-size: 18px;  /* 调整文字大小 */
+    color: #666;  /* 设置文字颜色，这里使用深灰色 */
+    background-color: #fff;  /* 可以设置下拉框的背景色，这里为白色 */
+    border: 1px solid #ccc;  /* 可以设置边框样式，这里为浅灰色边框 */
+    padding: 5px 10px;  /* 添加一些内边距，让文字不会贴边显示 */
+}
+
+.results-section video {
+    width: 70%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Prompts Section Styles */
+.prompts-section {
+    padding: 20px 15% 50px 15%; /* Adjust overall padding of the Prompts section */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.prompts-section h2 {
+    font-size: 35px; /* Main title font size */
+    color: #333;
+    margin-top: 5px; /* Smaller top margin */
+    margin-bottom: 15px; /* Reduced space below the main title */
+    text-align: left;
+    padding-left: 0%; /* Consistent left padding with other titles */
+}
+
+.prompts-section .sub-section {
+    margin-bottom: 15px; /* Reduced space between subsections */
+    margin-left: 45px; /* Reduced space between subsections */
+}
+
+.prompts-section .sub-section h3 {
+    font-size: 18px; /* Sub-title font size */
+    color: #666;
+    margin-top: 20px; /* Reduced top margin */
+    margin-bottom: 0px; /* Smaller space below each sub-title */
+    text-align: left;
+    padding-left: 0%; /* Increased left padding to offset sub-titles slightly */
+}
+
+.prompts-section .sub-section a {
+    font-size: 16px; /* Link font size */
+    color: blue;
+    text-decoration: none;
+    display: inline-block; /* Each link as inline-block for better control over spacing */
+    margin-right: 0px; /* Space between items */
+    margin-bottom: 0; /* No bottom margin to keep links closer to the sub-title */
+    padding: 0px 0% 0px 1%; /* Adjust overall padding of the Prompts section */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
